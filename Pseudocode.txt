@@ -1,0 +1,64 @@
+Simple Java program to correct the test and calculate the final score and percentage of correct answers for the student ------ "ExamGrader"
+
+1- Ideas for Chapters 1-8
+
+
+2- Scanner Library
+3- ExamGrader CLASS,main method
+4- array char Because they are letters {the answers A,B,D,C,A...........};
+5- numberOfQuestions: The number of questions in the test is determined using the length of the correct answer matrix 
+6-StudentAnswers matrix: Matrix for storing answers
+7- Create a Scanner object: to read user input 
+8- Print Statement: Asking the user to enter his answers for each question 
+9- (for loop) Q and enter 10 answers
+10- Enter the user (student answer) and choose the first letter of it
+11- dif the score with zero and "loop to verify each student's answer against the correct answer"
+12- Print Result: Displays the number of correct answers and the total number of questions
+13- Calculate percentage: Convert score to percentage using score/(double) numberOfQuestions to ensure that you accurately 
+calculate as a decimal, then multiply it by 100
+14- Output format to display the percentage with a resolution of up to two decimal places
+15- Close the Scanner object
+
+
+test
+Start Program
+
+    // Step 1: Define the correct answers
+    correctAnswers = [A, B, C, D, A, C, B, D, A, C]
+
+    // Step 2: Get the number of questions
+    numberOfQuestions = length of correctAnswers
+
+    // Step 3: Initialize an array to store student's answers
+    studentAnswers = Create an array with size numberOfQuestions
+
+    // Step 4: Set up the scanner for user input
+    scanner = Create a new Scanner object
+
+    // Step 5: Collect answers from the user
+    Print "Enter the student's answers for the " + numberOfQuestions + " questions:"
+    For i from 1 to numberOfQuestions:
+        Print "Question " + i + ":"
+        studentAnswer = scanner.nextChar()  // Read the next character from user
+        studentAnswers[i - 1] = studentAnswer  // Store the answer in the array
+
+    // Step 6: Calculate the score
+    score = 0
+    For i from 0 to numberOfQuestions - 1:
+        If studentAnswers[i] == correctAnswers[i]:
+            score = score + 1  // Increment score for each correct answer
+
+    // Step 7: Calculate the percentage of correct answers
+    percentage = (score / numberOfQuestions) * 100
+
+    // Step 8: Display the results
+    Print "The student's score is: " + score + " out of " + numberOfQuestions
+    Print "The percentage is: " + percentage formatted to two decimal places + "%"
+
+    // Step 9: Close the scanner
+    scanner.close()
+
+    End Program
+
+
+
